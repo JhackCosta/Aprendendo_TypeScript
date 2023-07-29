@@ -7,7 +7,7 @@ export abstract class View<T>{
 
     protected abstract template(model : T):string
 
-    update(model : T){
+    public update(model : T){
         const template: string = this.template(model);
         this.elemento.innerHTML = template;
     }
