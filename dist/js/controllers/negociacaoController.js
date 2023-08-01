@@ -15,7 +15,6 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = Negociacao.criaDe(this.inputData.value, this.inputQuantidade.value, this.inputValor.value);
-        //Verifia se o dia da semana está entres dias úteis
         if (!this.ehDiaUtil(negociacao.data)) {
             this.mensagemView.update("Só pode gerar uma negociação nos dias úteis da semana.");
             return;
